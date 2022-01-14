@@ -7,8 +7,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      // extendBodyBehindAppBar: true,
+      // backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
 
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -20,69 +20,163 @@ class HomeScreen extends StatelessWidget {
               image: AssetImage('assets/images/greenbackground2.jpg'),
               fit: BoxFit.cover),
         ),
-        child: Column(
-          children: [
-            // Image(image:AssetImage("images/greenbackground2.jpg")),
-
-            Text(
-              "Browse",
-              style: TextStyle(fontSize: 40, color: Colors.white),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Text(
-              "find prodcast that suit to your interest",
-              style: TextStyle(fontSize: 15, color: Colors.white),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 20,
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(50),
-                    borderSide: BorderSide(
-                      color: Color(0XFFF3F3F3),
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 150),
+          child: Column(
+            children: [
+              Text(
+                "Browse",
+                style: TextStyle(fontSize: 40, color: Colors.white),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "find prodcast that suit to your interest",
+                style: TextStyle(fontSize: 15, color: Colors.white),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                child: TextField(
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
                     ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50),
+                      borderSide: BorderSide(
+                        color: Color(0XFFF3F3F3),
+                      ),
+                    ),
+                    hintText: "    type keyboard",
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    fillColor: Colors.white54,
+                    filled: true,
                   ),
-                  hintText: "    type keyboard",
-                  hintStyle: TextStyle(
-                    color: Colors.white,
-                  ),
-                  fillColor: Colors.white54,
-                  filled: true,
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(child: Text("0"),backgroundColor: Colors.white,),
-                      Text("populer",style: TextStyle(color: Colors.white),),
-                    ],
-                  ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    'assets/images/star.png',
+                                  ),
+                                ),
+                                color: Colors.white,
+                                borderRadius: BorderRadiusDirectional.all(
+                                    Radius.circular(40))),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            "Populer",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/increase.png'),
+                                ),
+                                borderRadius: BorderRadiusDirectional.all(
+                                    Radius.circular(40))),
+                          ),
+                          SizedBox(height: 15,),
 
-                ],
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height / 3,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadiusDirectional.only(
-                  topEnd: Radius.circular(40),
-                  topStart: Radius.circular(40),
+                          Text(
+                            "Trending",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/history.png'),
+                                ),
+                                borderRadius: BorderRadiusDirectional.all(
+                                    Radius.circular(40))),
+                          ),
+                          SizedBox(height: 15,),
+
+                          Text(
+                            "Recent",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            height:70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image: AssetImage('assets/images/magic.png'),
+                                ),
+                                borderRadius: BorderRadiusDirectional.all(
+                                    Radius.circular(40))),
+                          ),
+                          SizedBox(height: 15,),
+                          Text(
+                            "Magic",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 50,),
+
+              Container(
+                alignment: Alignment.bottomCenter,
+
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadiusDirectional.only(
+                    topEnd: Radius.circular(40),
+                    topStart: Radius.circular(40),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
