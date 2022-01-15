@@ -32,7 +32,7 @@ class PostWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.amber,
                 borderRadius: BorderRadiusDirectional.all(Radius.circular(30)),
-                image: DecorationImage(image: NetworkImage(postmodel.userImg)),
+                image: DecorationImage(image: NetworkImage(postmodel.postImg),fit:BoxFit.cover),
               ),
             ),
             Padding(
@@ -50,7 +50,7 @@ class PostWidget extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 110),
                     child: Text(
-                      postmodel.userName,
+                      postmodel.postCreator.userName,
                       style: TextStyle(
                         fontSize: 11,
                         color: Colors.black54,
@@ -59,7 +59,7 @@ class PostWidget extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

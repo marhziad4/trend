@@ -64,7 +64,7 @@ class SecondScreen extends StatelessWidget {
                   ),
                 ),
                 Row(
-                  children: AllPost.map((e) => AuthorsWidget(e)).toList(),
+                  children: users.map((e) => AuthorsWidget(e)).toList(),
 
                 ),
               ],

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:trends_app/models/post_model.dart';
+import 'package:trends_app/models/user_model.dart';
 
 class AuthorsWidget extends StatelessWidget {
-  postModel postmodel;
-  AuthorsWidget(this.postmodel);
+  userModel usermodel;
+  AuthorsWidget(this.usermodel);
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -15,10 +15,10 @@ class AuthorsWidget extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50,
-                backgroundImage: NetworkImage(postmodel.userImg),
+                backgroundImage: NetworkImage(usermodel.userImg),
               ),
               SizedBox(height: 15,),
-              Text(postmodel.userName,
+              Text(usermodel.userName,
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.black54,

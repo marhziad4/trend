@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:trends_app/models/post_model.dart';
+import 'package:trends_app/models/user_model.dart';
 
 class ThirdScreen extends StatelessWidget {
   postModel postmodel;
@@ -27,7 +28,7 @@ class ThirdScreen extends StatelessWidget {
         child: Column(
           children: [
             Image.network(
-              postmodel.userImg,
+              postmodel.postImg,
               fit: BoxFit.cover,
             ),
             Padding(
@@ -68,14 +69,14 @@ class ThirdScreen extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage(postmodel.userImg),
+                      backgroundImage: NetworkImage(postmodel.postCreator.userImg),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
                           Text(
-                            postmodel.userName,
+                            postmodel.postCreator.userName,
                             style: TextStyle(fontWeight: FontWeight.bold,
                               fontSize: 15,
                             ),
