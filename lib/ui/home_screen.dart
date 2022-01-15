@@ -70,18 +70,11 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/star.png',
-                                  ),
-                                ),
-                                color: Colors.white,
-                                borderRadius: BorderRadiusDirectional.all(
-                                    Radius.circular(40))),
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            backgroundImage:  AssetImage('assets/images/star.png',
+                      ),
                           ),
                           SizedBox(
                             height: 15,
@@ -96,17 +89,10 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/increase.png'),
-                                ),
-                                borderRadius: BorderRadiusDirectional.all(
-                                    Radius.circular(40))),
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage('assets/images/increase.png'),
                           ),
                           SizedBox(
                             height: 15,
@@ -121,17 +107,11 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/history.png'),
-                                ),
-                                borderRadius: BorderRadiusDirectional.all(
-                                    Radius.circular(40))),
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            backgroundImage:AssetImage('assets/images/history.png'),
+
                           ),
                           SizedBox(
                             height: 15,
@@ -146,16 +126,10 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                image: DecorationImage(
-                                  image: AssetImage('assets/images/magic.png'),
-                                ),
-                                borderRadius: BorderRadiusDirectional.all(
-                                    Radius.circular(40))),
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage('assets/images/magic.png'),
                           ),
                           SizedBox(
                             height: 15,
@@ -215,3 +189,15 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+// Container(
+// width: 70,
+// height: 70,
+// decoration: BoxDecoration(
+// color: Colors.white,
+// image: DecorationImage(
+// image:
+// AssetImage('assets/images/increase.png'),
+// ),
+// borderRadius: BorderRadiusDirectional.all(
+// Radius.circular(40))),
+// ),

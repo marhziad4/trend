@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trends_app/models/post_model.dart';
-import 'package:trends_app/ui/theard_screen.dart';
+import 'package:trends_app/ui/third_screen.dart';
 
 class PostWidget extends StatelessWidget {
   postModel postmodel;
@@ -17,7 +17,7 @@ class PostWidget extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return TheardScreen(
+                return ThirdScreen(
                   postmodel
                 );
               },
