@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trends_app/ui/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
       ),
       drawer: Drawer(),
+
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -21,12 +23,15 @@ class HomeScreen extends StatelessWidget {
               fit: BoxFit.cover),
         ),
         child: Container(
-          margin: EdgeInsets.symmetric(vertical: 150),
+          margin: EdgeInsets.only(top: 130),
           child: Column(
             children: [
               Text(
                 "Browse",
-                style: TextStyle(fontSize: 40, color: Colors.white),
+                style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 15,
@@ -103,8 +108,9 @@ class HomeScreen extends StatelessWidget {
                                 borderRadius: BorderRadiusDirectional.all(
                                     Radius.circular(40))),
                           ),
-                          SizedBox(height: 15,),
-
+                          SizedBox(
+                            height: 15,
+                          ),
                           Text(
                             "Trending",
                             style: TextStyle(color: Colors.white),
@@ -127,8 +133,9 @@ class HomeScreen extends StatelessWidget {
                                 borderRadius: BorderRadiusDirectional.all(
                                     Radius.circular(40))),
                           ),
-                          SizedBox(height: 15,),
-
+                          SizedBox(
+                            height: 15,
+                          ),
                           Text(
                             "Recent",
                             style: TextStyle(color: Colors.white),
@@ -140,7 +147,7 @@ class HomeScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height:70,
+                            height: 70,
                             width: 70,
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -150,7 +157,9 @@ class HomeScreen extends StatelessWidget {
                                 borderRadius: BorderRadiusDirectional.all(
                                     Radius.circular(40))),
                           ),
-                          SizedBox(height: 15,),
+                          SizedBox(
+                            height: 15,
+                          ),
                           Text(
                             "Magic",
                             style: TextStyle(color: Colors.white),
@@ -161,17 +170,41 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 50,),
-
-              Container(
-                alignment: Alignment.bottomCenter,
-
-                height: 200,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadiusDirectional.only(
-                    topEnd: Radius.circular(40),
-                    topStart: Radius.circular(40),
+              SizedBox(
+                height: 70,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SecondScreen();
+                      },
+                    ),
+                  );
+                },
+                child: Container(
+                  alignment: Alignment.bottomCenter,
+                  height: 319,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadiusDirectional.only(
+                      topEnd: Radius.circular(40),
+                      topStart: Radius.circular(40),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(25.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Handpicked",
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
+                            letterSpacing: 2.0,
+                          ),
+                        ),                    ],
+                    ),
                   ),
                 ),
               ),
