@@ -47,8 +47,8 @@ class PostWidget extends StatelessWidget {
                   SizedBox(
                     height: 15,
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
+                  Padding(
+                    padding: const EdgeInsets.only(right: 110),
                     child: Text(
                       postmodel.userName,
                       style: TextStyle(

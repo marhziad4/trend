@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trends_app/data/dummy_data.dart';
 import 'package:trends_app/ui/second_screen.dart';
+import 'package:trends_app/widget/post_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -160,7 +162,7 @@ class HomeScreen extends StatelessWidget {
                 },
                 child: Container(
                   alignment: Alignment.bottomCenter,
-                  height: 319,
+                  height: 329,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadiusDirectional.only(
@@ -177,7 +179,14 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
                             letterSpacing: 2.0,
                           ),
-                        ),                    ],
+                        ),
+                        SingleChildScrollView(
+                          child: Column(
+                            children: AllPost.map((e) => PostWidget(e)).toList(),
+
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

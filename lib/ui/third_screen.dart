@@ -95,7 +95,7 @@ class ThirdScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(50.0),
               child: Row(
                 children: [
                   Expanded(
@@ -112,7 +112,7 @@ class ThirdScreen extends StatelessWidget {
                         ),
                         Text(
                           "Populer",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ],
                     ),
@@ -130,7 +130,7 @@ class ThirdScreen extends StatelessWidget {
                         ),
                         Text(
                           "Trending",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ],
                     ),
@@ -149,29 +149,11 @@ class ThirdScreen extends StatelessWidget {
                         ),
                         Text(
                           "Recent",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ],
                     ),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage('assets/images/magic.png'),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          "Magic",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
