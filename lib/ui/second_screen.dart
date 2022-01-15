@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trends_app/data/dummy_data.dart';
+import 'package:trends_app/widget/authors_widget.dart';
 import 'package:trends_app/widget/post_widget.dart';
 
 class SecondScreen extends StatelessWidget {
@@ -53,9 +54,18 @@ class SecondScreen extends StatelessWidget {
                 ),
                 Column(
                   children: AllPost.map((e) => PostWidget(e)).toList(),
-                )
+
+                ),
+                Text("Top Authors",
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                Row(
+                  children: AllPost.map((e) => AuthorsWidget(e)).toList(),
+
+                ),
               ],
             ),
+
           ),
         ),
       ),
