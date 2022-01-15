@@ -6,24 +6,30 @@ class AuthorsWidget extends StatelessWidget {
   AuthorsWidget(this.postmodel);
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children:[
-      Column(
-        children: [
-          CircleAvatar(
-            radius: 40,
-            backgroundImage: NetworkImage(postmodel.userImg),
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children:[
+          Column(
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(postmodel.userImg),
+              ),
+              SizedBox(height: 15,),
+              Text(postmodel.userName,
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.black54,
+                ),
+              ),
+            ],
           ),
-          Text(postmodel.userName,
-            style: TextStyle(
-              fontSize: 11,
-              color: Colors.black54,
-            ),
-          ),
-        ],
-      ),
-    ]
+        ]
 
+        ),
+      ),
     );
   }
 }

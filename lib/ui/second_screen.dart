@@ -56,8 +56,12 @@ class SecondScreen extends StatelessWidget {
                   children: AllPost.map((e) => PostWidget(e)).toList(),
 
                 ),
-                Text("Top Authors",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                SizedBox(height: 100,),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Text("Top Authors",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 Row(
                   children: AllPost.map((e) => AuthorsWidget(e)).toList(),

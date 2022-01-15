@@ -45,11 +45,14 @@ class PostWidget extends StatelessWidget {
                   SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    postmodel.userName,
-                    style: TextStyle(
-                      fontSize: 11,
-                      color: Colors.black54,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      postmodel.userName,
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Colors.black54,
+                      ),
                     ),
                   ),
                 ],
